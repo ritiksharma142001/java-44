@@ -1,0 +1,41 @@
+package com.learn.hibernate.HibernateProject_1;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	//created configuration
+        Configuration cfg = new Configuration();
+        cfg.configure();
+        //building session factory
+        SessionFactory factory = cfg.buildSessionFactory();
+//        System.out.println(factory);
+//        System.out.println("Hibernate is working");
+        
+        //open session
+        Session session = factory.openSession();
+        
+        //begin transaction
+        Transaction tr = session.beginTransaction();
+        
+        //create student object
+        Student s1 = new Student(1, "Ritik", 94);
+        
+        //saving student Object
+        session.save(s1);
+        
+        //commit changes
+        tr.commit();
+    }
+}

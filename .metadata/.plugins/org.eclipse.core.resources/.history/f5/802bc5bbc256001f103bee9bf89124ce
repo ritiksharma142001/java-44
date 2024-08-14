@@ -1,0 +1,38 @@
+package com.learn.springproject.SpringProject2;
+
+//import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.learn.springproject.SpringProject1.Person;
+
+@SpringBootApplication
+public class SpringProject2Application {
+
+	public static void main(String[] args) {
+		// To activate the bean using config.xml by this class
+				ClassPathXmlApplicationContext ctXmlApplicationContext = new ClassPathXmlApplicationContext("config.xml");
+				
+				
+				//get the reference of that class via id pers and cast it to Person object
+				Student st = (Student)ctXmlApplicationContext.getBean("stu");
+				
+				System.out.println(st.id);
+				System.out.println(st.name);
+				System.out.println(st.marks);
+				
+				st.study();
+				st.doProject();
+				
+				Professor pr = (Professor)ctXmlApplicationContext.getBean("pro");
+				
+				System.out.println(pr.id);
+				System.out.println(pr.name);
+				System.out.println(pr.subject);
+				
+				pr.teach();
+				pr.checkAssignment();
+
+	}
+
+}

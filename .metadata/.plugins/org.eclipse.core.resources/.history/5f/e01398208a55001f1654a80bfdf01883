@@ -1,0 +1,6 @@
+package com.learn.hibernate.OneToMany.Vehicle;
+
+public class Bike {
+	String bd_id;
+	String bk_brand;
+}

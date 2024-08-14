@@ -1,0 +1,10 @@
+package com.mentors;
+
+public class SqlMentor {
+	public void teach() {
+		System.out.println("sql menot is teachcing sql");
+	}
+	public void taleAttendance() {
+		System.out.println("Sql mentor is taking attendance");
+	}
+}

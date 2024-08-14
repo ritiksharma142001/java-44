@@ -1,0 +1,11 @@
+package com.learn.hibernate.OneToMany.Vehicle;
+
+import java.util.List;
+
+public class Bike {
+	int bk_id;
+	String bk_brand;
+	
+	List<Rider> rider;
+	
+}

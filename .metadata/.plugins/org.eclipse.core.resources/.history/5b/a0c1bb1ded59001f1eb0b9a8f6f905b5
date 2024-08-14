@@ -1,0 +1,33 @@
+package com.example.SpringProject4.SpringProject4;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+
+
+@SpringBootApplication
+public class SpringProject4Application {
+
+	public static void main(String[] args) {
+		
+		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("config.xml");
+
+		Company company = (Company)ctx.getBean("c1");
+		System.out.println(company);
+		
+		
+		Employee emp1 = (Employee)ctx.getBean("e1");		
+		System.out.println("Employee 1 id: " + emp1.empId);
+		System.out.println("Employee 1 name : " +emp1.empName);
+		System.out.println("Laptop 1 salary: " + emp1.empSalary);
+		
+		System.out.println("----------------------------------------------");
+	
+		Employee emp2 = (Employee)ctx.getBean("e2");
+		System.out.println("Employee 2 id: " + emp2.empId);
+		System.out.println("Employee 2 name : " +emp2.empName);
+		System.out.println("Laptop 2 salary: " + emp2.empSalary);
+
+	}
+}

@@ -1,0 +1,5 @@
+package com.learn.hibernate.EmployeeHibernateProject;
+
+public class Employee {
+
+}

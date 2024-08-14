@@ -1,0 +1,10 @@
+package com.mentors;
+
+public class JavaMentor {
+	public void teach() {
+		System.out.println("Java menot is teachcing java");
+	}
+	public void taleAttendance() {
+		System.out.println("java mentor is taking attendance");
+	}
+}

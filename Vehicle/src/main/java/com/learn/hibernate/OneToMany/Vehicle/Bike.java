@@ -1,0 +1,61 @@
+package com.learn.hibernate.OneToMany.Vehicle;
+
+import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+@Entity
+public class Bike {
+	@Id
+	int bk_id;
+	String bk_brand;
+	
+	@OneToMany
+	List<Rider> rider;
+
+	public Bike() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Bike(int bk_id, String bk_brand, List<Rider> rider) {
+		super();
+		this.bk_id = bk_id;
+		this.bk_brand = bk_brand;
+		this.rider = rider;
+	}
+
+	public int getBk_id() {
+		return bk_id;
+	}
+
+	public void setBk_id(int bk_id) {
+		this.bk_id = bk_id;
+	}
+
+	public String getBk_brand() {
+		return bk_brand;
+	}
+
+	public void setBk_brand(String bk_brand) {
+		this.bk_brand = bk_brand;
+	}
+
+	public List<Rider> getRider() {
+		return rider;
+	}
+
+	public void setRider(List<Rider> rider) {
+		this.rider = rider;
+	}
+
+	@Override
+	public String toString() {
+		return "Bike [bk_id=" + bk_id + ", bk_brand=" + bk_brand + ", rider=" + rider + "]";
+	}
+	
+	
+	
+}

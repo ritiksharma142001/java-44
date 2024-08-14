@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- setter injection -->
+	<!--  
+	<bean class="com.example.SpringProject3.Laptop" id="lappy">
+		<property name="laptopId" value="1"></property>
+		<property name="laptopBrand" value="asus"></property>
+		<property name="laptopCost" value="23.45"></property>
+	</bean>
+	-->
+	
+	<!-- Constructor injection -->
+	<!--  -->
+	<bean class="com.example.SpringProject3.Laptop" id="lappy">
+		<constructor-arg value="1"></constructor-arg>
+		<constructor-arg value="asus"></constructor-arg>		
+		<constructor-arg value="34554.344"></constructor-arg>
+	</bean>
+	 
+	
+	<!--  -->
+	<bean class="com.example.SpringProject3.Laptop" id="lappy2">
+		<property name="laptopId" value="2"></property>
+		<property name="laptopBrand" value="lenovo"></property>
+		<property name="laptopCost" value="2367.45"></property>
+	</bean>
+	
+	
+	<!--  --> 
+	<bean class="com.example.SpringProject3" id="lappy2">
+		<constructor-arg value="2"></constructor-arg>
+		<constructor-arg value="dell"></constructor-arg>		
+		<constructor-arg value="344.344"></constructor-arg>
+	</bean>
+	
+	
+	<!-- Employee Class
+	<bean class="com.example.SpringProject3.Employee" id="emp1">
+		<property name="technologies">
+			<list>
+				<value>Java</value>
+				<value>Java</value>
+				<value>Java</value>
+			</list>
+		</property>
+		
+		<property name="projects">
+			<set>
+				<value>Project-1</value>
+				<value>Project-2</value>
+				<value>Project-3</value>
+			</set>
+		</property>
+		
+		<property name="companies">
+			<map>
+				<entry key="12" value="Company-1"></entry>
+				<entry key="13" value="Company-2"></entry>
+				<entry key="14" value="Company-3"></entry>
+				<entry key="15" value="Company-4"></entry>
+			</map>
+		</property>
+		
+	</bean>
+	--> 
+	
+
+</beans>

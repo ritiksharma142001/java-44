@@ -1,0 +1,48 @@
+package com.example.springproject3.SpringProject3;
+
+public class Laptop {
+	int laptopId;
+	String laptopBrand;
+	double laptopCost;
+	
+	void switchOn() {
+		System.out.println("laptop is switch on");
+	}
+	void shutDown() {
+		System.out.println("shut down");
+	}
+	public Laptop() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Laptop(int laptopId, String laptopBrand, double laptopCost) {
+		super();
+		this.laptopId = laptopId;
+		this.laptopBrand = laptopBrand;
+		this.laptopCost = laptopCost;
+	}
+	public int getLaptopId() {
+		return laptopId;
+	}
+	public void setLaptopId(int laptopId) {
+		this.laptopId = laptopId;
+	}
+	public String getLaptopBrand() {
+		return laptopBrand;
+	}
+	public void setLaptopBrand(String laptopBrand) {
+		this.laptopBrand = laptopBrand;
+	}
+	public double getLaptopCost() {
+		return laptopCost;
+	}
+	public void setLaptopCost(double laptopCost) {
+		this.laptopCost = laptopCost;
+	}
+	@Override
+	public String toString() {
+		return "Laptop [laptopId=" + laptopId + ", laptopBrand=" + laptopBrand + ", laptopCost=" + laptopCost + "]";
+	}
+	
+	
+}

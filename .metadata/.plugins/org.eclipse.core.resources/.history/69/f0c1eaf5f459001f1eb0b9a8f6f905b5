@@ -1,0 +1,29 @@
+package com.example.SpringProject4.SpringProject4;
+
+public class Company {
+	Employee emp;
+
+	public Company() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Company(Employee emp) {
+		super();
+		this.emp = emp;
+	}
+
+	public Employee getEmp() {
+		return emp;
+	}
+
+	public void setEmp(Employee emp) {
+		this.emp = emp;
+	}
+
+	@Override
+	public String toString() {
+		return "Company [emp=" + emp + "]";
+	}
+	
+}

@@ -1,0 +1,5 @@
+package com.learn.hibernate.OneToMany.Vehicle;
+
+public class Rider {
+
+}

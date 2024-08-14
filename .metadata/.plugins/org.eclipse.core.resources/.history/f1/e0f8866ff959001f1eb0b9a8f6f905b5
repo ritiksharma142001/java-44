@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	
+	<!-- Constructor injection -->
+	<!-- performing Wiring using ref keyword in c1-->
+	<!--  
+	<bean class="com.example.SpringProject4.SpringProject4.Company" id="c1">
+		<constructor-arg ref="e1"></constructor-arg>
+	</bean>
+
+	<bean class="com.example.SpringProject4.SpringProject4.Employee" id="e1">
+		<constructor-arg value="1"></constructor-arg>
+		<constructor-arg value="amit"></constructor-arg>		
+		<constructor-arg value="34554"></constructor-arg>
+	</bean>
+	<bean class="com.example.SpringProject4.SpringProject4.Employee" id="e2">
+		<constructor-arg value="2"></constructor-arg>
+		<constructor-arg value="anuj"></constructor-arg>		
+		<constructor-arg value="34400"></constructor-arg>
+	</bean>
+	-->
+	
+	<!-- byName autowire -->
+	<!--  
+	<bean class="com.example.SpringProject4.SpringProject4.Company" id="c1" autowire="byName">
+	</bean>
+
+	<bean class="com.example.SpringProject4.SpringProject4.Employee" id="e1">
+		<constructor-arg value="1"></constructor-arg>
+		<constructor-arg value="amit"></constructor-arg>		
+		<constructor-arg value="34554"></constructor-arg>
+	</bean>
+	<bean class="com.example.SpringProject4.SpringProject4.Employee" id="e2">
+		<constructor-arg value="2"></constructor-arg>
+		<constructor-arg value="anuj"></constructor-arg>		
+		<constructor-arg value="34400"></constructor-arg>
+	</bean>
+	-->
+	
+	<!-- byType autowire -->
+	<!--  
+	<bean class="com.example.SpringProject4.SpringProject4.Company" id="c1" autowire="byName">
+	</bean>
+	<bean class="com.example.SpringProject4.SpringProject4.Employee" id="emp">
+		<constructor-arg value="1"></constructor-arg>
+		<constructor-arg value="amit"></constructor-arg>		
+		<constructor-arg value="34554"></constructor-arg>
+	</bean>
+	-->
+	
+	<!-- constructor autowire -->
+	<bean class="com.example.SpringProject4.SpringProject4.Company" id="c1" autowire="constructor">
+	</bean>
+	<bean class="com.example.SpringProject4.SpringProject4.Employee" id="emp">
+		<constructor-arg value="1"></constructor-arg>
+		<constructor-arg value="amit"></constructor-arg>		
+		<constructor-arg value="34554"></constructor-arg>
+	</bean>
+
+</beans>

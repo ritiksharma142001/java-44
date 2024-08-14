@@ -1,0 +1,58 @@
+package com.learn.springproject.SpringProject2;
+
+public class Professor {
+
+	int id;
+	String name;
+	String subject;
+	
+	void teach() {
+		System.out.println("Professor is teaching");
+	}
+	
+	void checkAssignment() {
+		System.out.println("Professor is checking Assignment");
+	}
+
+	public Professor() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Professor(int id, String name, String subject) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.subject = subject;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getSubject() {
+		return subject;
+	}
+
+	public void setSubject(String subject) {
+		this.subject = subject;
+	}
+
+	@Override
+	public String toString() {
+		return "Professor [id=" + id + ", name=" + name + ", subject=" + subject + "]";
+	}
+	
+}

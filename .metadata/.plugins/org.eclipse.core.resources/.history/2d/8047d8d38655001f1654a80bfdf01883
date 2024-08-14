@@ -1,0 +1,43 @@
+package com.learn.hibernate.Computer;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        //object creation
+    	Charger c1 = new Charger(1001, "Charger 1", 888);
+    	Charger c2 = new Charger(1002, "Charger 2", 999);
+
+    	Laptop l1 = new Laptop(1, "Dell", 33999, c1);
+    	Laptop l2 = new Laptop(2, "lenovo", 40999, c2);
+
+    	
+    	//hibernate code
+    	Configuration cfg = new Configuration();
+    	cfg.configure();
+    	SessionFactory factory = cfg.buildSessionFactory();
+    	Session session = factory.openSession();
+    	Transaction tx = session.beginTransaction();
+    	
+    	//save object
+    	session.save(c1);
+    	session.save(c2);
+    	session.save(l1);
+    	session.save(l2);
+    	
+    	//commit transaction
+    	tx.commit();
+
+    	
+    	
+    }
+}

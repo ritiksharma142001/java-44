@@ -1,0 +1,8 @@
+package com.learn.hibernate.OneToMany.Vehicle;
+
+public class Rider {
+	int R_id;
+	String R_Name;
+	
+	Bike bk;
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="com.example.SpringProject2.Student" id="stu">
+		<property name="id" value="12"></property>
+		<property name="name" value="Ritik"></property>
+		<property name="marks" value="23"></property>
+	</bean>
+	
+	<bean class="com.example.SpringProject2.Student" id="stu2">
+		<property name="id" value="12"></property>
+		<property name="name" value="raj"></property>
+		<property name="marks" value="2344"></property>
+	</bean>
+	
+	<bean class="com.example.SpringProject2.Professor" id="pro">
+		<property name="id" value="12"></property>
+		<property name="name" value="grdh"></property>
+		<property name="subject" value="sdgfv"></property>
+	</bean>
+		
+	<bean class="com.example.SpringProject2.Professor" id="pro2">
+		<property name="id" value="12"></property>
+		<property name="name" value="svf"></property>
+		<property name="subject" value="sfgsf"></property>
+	</bean>
+
+</beans>

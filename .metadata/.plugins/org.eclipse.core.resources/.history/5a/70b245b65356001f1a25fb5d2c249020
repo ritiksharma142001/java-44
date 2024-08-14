@@ -1,0 +1,5 @@
+package com.learn.hibernate.OneToMany.ManyToMany;
+
+public class Developer {
+
+}

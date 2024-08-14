@@ -1,0 +1,71 @@
+package com.learn.hibernate.OneToMany.Vehicle;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        Configuration cfg = new Configuration();
+        SessionFactory factory = cfg.buildSessionFactory();
+        factory.openSession();
+        Session sess = factory.openSession();
+        Transaction tr = sess.beginTransaction();
+        
+        //craeting object of bike
+        Bike bk1 = new Bike();
+        bk1.bk_id = 1;
+        bk1.bk_brand = "Hero";
+        
+        Bike bk2 = new Bike();
+        bk2.bk_id = 2;
+        bk2.bk_brand = "KTM";
+        
+        //creating object of rider & assigning bike
+        Rider rd1 = new Rider(101, "Ritik", bk1);
+        Rider rd2 = new Rider(102, "Amit", bk1);
+        Rider rd3 = new Rider(103, "Manoj", bk2);
+        Rider rd4 = new Rider(104, "Mohit", bk2);
+        Rider rd5 = new Rider(105, "Ronit", bk2);
+        
+        //creating list for bike bk1
+        List<Rider> rdList1 = new ArrayList<Rider>();
+        rdList1.add(rd1);
+        rdList1.add(rd2);
+        
+        //creating list for bike bk2
+
+        List<Rider> rdList2 = new ArrayList<Rider>();
+        rdList2.add(rd3);
+        rdList2.add(rd4);
+        rdList2.add(rd5);
+        
+        //assigning rider list to bike bk1
+        bk1.setRider(rdList1);
+        //assigning rider list to bike bk2
+        bk2.setRider(rdList2);
+
+        //saving objects
+        sess.save(bk1);
+        sess.save(bk2);
+        sess.save(rd1);
+        sess.save(rd2);
+        sess.save(rd3);
+        sess.save(rd4);
+        sess.save(rd5);
+
+        tr.commit();
+        System.out.println("All object are saved");
+    }
+}

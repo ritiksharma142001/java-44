@@ -1,0 +1,14 @@
+package com.mentors;
+
+public class Classroom {
+	JavaMentor mentor;
+	
+	public Classroom(JavaMentor mentor) {
+		this.mentor = mentor;
+	}
+
+	public void conductSession() {
+		mentor.teach();
+		mentor.takeAttendance();
+	}
+}

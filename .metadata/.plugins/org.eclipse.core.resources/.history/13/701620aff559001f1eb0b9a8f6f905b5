@@ -1,0 +1,32 @@
+package com.example.SpringProject4.SpringProject4;
+
+public class Company {
+	Employee emp;
+
+	public Company() {
+		super();
+		// TODO Auto-generated constructor stub
+		System.out.println("0-para constructor");
+	}
+
+	public Company(Employee emp) {
+		super();
+		System.out.println("para constructor");
+		this.emp = emp;
+	}
+
+	public Employee getEmp() {
+		System.out.println("setter method");
+		return emp;
+	}
+
+	public void setEmp(Employee emp) {
+		this.emp = emp;
+	}
+
+	@Override
+	public String toString() {
+		return "Company [emp=" + emp + "]";
+	}
+	
+}

@@ -1,0 +1,51 @@
+package com.learn.hibernate.OneToMany.Vehicle;
+
+public class Rider {
+	int R_id;
+	String R_Name;
+	
+	Bike bk;
+
+	public Rider() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Rider(int r_id, String r_Name, Bike bk) {
+		super();
+		R_id = r_id;
+		R_Name = r_Name;
+		this.bk = bk;
+	}
+
+	public int getR_id() {
+		return R_id;
+	}
+
+	public void setR_id(int r_id) {
+		R_id = r_id;
+	}
+
+	public String getR_Name() {
+		return R_Name;
+	}
+
+	public void setR_Name(String r_Name) {
+		R_Name = r_Name;
+	}
+
+	public Bike getBk() {
+		return bk;
+	}
+
+	public void setBk(Bike bk) {
+		this.bk = bk;
+	}
+
+	@Override
+	public String toString() {
+		return "Rider [R_id=" + R_id + ", R_Name=" + R_Name + ", bk=" + bk + "]";
+	}
+	
+	
+}
