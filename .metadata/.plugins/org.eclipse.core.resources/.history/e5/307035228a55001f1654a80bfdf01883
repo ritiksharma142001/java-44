@@ -1,6 +1,0 @@
-package com.learn.hibernate.OneToMany.Vehicle;
-
-public class Rider {
-	String R_id;
-	String R_Name;
-}
