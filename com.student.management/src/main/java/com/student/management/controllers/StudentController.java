@@ -1,9 +1,13 @@
 package com.student.management.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -76,5 +80,33 @@ public class StudentController {
 		return "student added successfully";
 	}
 	
+	@GetMapping("/searchStudent")
+	public Student searchStudent(@RequestParam int roll) {
+		Student st = service.searchStudent(roll);
+		return st;
+	}
+	
+	@PutMapping("/updateStudent")
+	public String updateStudent(@RequestBody Student st) {
+		service.updateStudent(st);
+		System.out.println(st);
+		return "student updated successfully";
+	}
+	
+	@DeleteMapping("/deleteStudent")
+	public String deleteStudent(@RequestParam int roll) {
+		service.deleteStudent(roll);
+		return "student deleted successfully";
+	}
+	
+	@GetMapping("getAllStudent")
+	public List<Student> getAllStudnet(){
+		return service.getAllStudent();	
+	}
+	
+	@DeleteMapping("/deleteAllStudents")
+    public String deleteAllStudents() {
+        return service.deleteAllStudents();
+    }
 	
 }
