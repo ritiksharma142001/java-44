@@ -11,4 +11,8 @@ public class NavigationController {
 	public String openAddStudentPage() {
 		return "add-student";
 	}
+	@GetMapping("/openUpdateStudentPage")
+	public String openUpdateStudentPage() {
+		return "update-student";
+	}
 }

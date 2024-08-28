@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -74,7 +75,7 @@ public class StudentController {
 	StudentService service;
 	
 	@PostMapping("/addStudent")
-	public String addStudentObject(@RequestBody Student st) {
+	public String addStudentObject(@ModelAttribute Student st) {
 		service.addStudent(st);
 		System.out.println(st);
 		return "student added successfully";
@@ -86,8 +87,8 @@ public class StudentController {
 		return st;
 	}
 	
-	@PutMapping("/updateStudent")
-	public String updateStudent(@RequestBody Student st) {
+	@PostMapping("/updateStudent")
+	public String updateStudent(@ModelAttribute Student st) {
 		service.updateStudent(st);
 		System.out.println(st);
 		return "student updated successfully";
