@@ -15,4 +15,14 @@ public class NavigationController {
 	public String openUpdateStudentPage() {
 		return "update-student";
 	}
+	@GetMapping("/openDeleteStudentPage")
+	public String openDeleteStudentPage() {
+		return "delete-student";
+	}
+	
+	@GetMapping("/openSearchStudentPage")
+	public String openSearchStudentPage() {
+		return "search-student";
+	}
+	
 }

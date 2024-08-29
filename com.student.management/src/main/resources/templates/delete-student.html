@@ -2,7 +2,7 @@
 <html>
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Student</title>
+    <title>Delete Student</title>
     <style>
         body{
             font-family: Arial, Helvetica, sans-serif;
@@ -58,27 +58,11 @@
     </style>
 </head>
 <body>
-	<h2>Add a new Student</h2>
-	<form action="/addStudent" method="post">
+	<h2>Delete a new Student</h2>
+	<form action="/deleteStudent" method="get">
         <div class="form-group">
             <label for="roll">Roll Number:</label>
             <input type="text" id="roll" name="roll" required>
-        </div>
-        <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-            <label for="branch">Branch:</label>
-            <input type="text" id="branch" name="branch" required>
-        </div>
-        <div class="form-group">
-            <label for="yop">Year of Passing:</label>
-            <input type="text" id="yop" name="yop" required>
-        </div>
-        <div class="form-group">
-            <label for="cgpa">CGPA:</label>
-            <input type="text" id="cgpa" name="cgpa" required>
         </div>
         <div class="form-group">
             <button type="submit">Add Student</button>

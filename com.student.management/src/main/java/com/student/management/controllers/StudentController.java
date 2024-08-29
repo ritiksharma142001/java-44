@@ -94,7 +94,7 @@ public class StudentController {
 		return "student updated successfully";
 	}
 	
-	@DeleteMapping("/deleteStudent")
+	@GetMapping("/deleteStudent")
 	public String deleteStudent(@RequestParam int roll) {
 		service.deleteStudent(roll);
 		return "student deleted successfully";
@@ -105,7 +105,7 @@ public class StudentController {
 		return service.getAllStudent();	
 	}
 	
-	@DeleteMapping("/deleteAllStudents")
+	@GetMapping("/deleteAllStudents")
     public String deleteAllStudents() {
         return service.deleteAllStudents();
     }
