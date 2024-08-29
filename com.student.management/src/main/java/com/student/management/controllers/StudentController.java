@@ -3,6 +3,8 @@ package com.student.management.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -16,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.student.management.entities.Student;
 import com.student.management.services.StudentService;
 
-@RestController
+@Controller
 public class StudentController {
 	
 //	@GetMapping("/hello")
@@ -82,9 +84,10 @@ public class StudentController {
 	}
 	
 	@GetMapping("/searchStudent")
-	public Student searchStudent(@RequestParam int roll) {
+	public String searchStudent(@RequestParam int roll, Model model) {
 		Student st = service.searchStudent(roll);
-		return st;
+		model.addAttribute("student", st);
+		return "displayStudent";
 	}
 	
 	@PostMapping("/updateStudent")
