@@ -80,7 +80,7 @@ public class StudentController {
 	public String addStudentObject(@ModelAttribute Student st) {
 		service.addStudent(st);
 		System.out.println(st);
-		return "student added successfully";
+		return "index";
 	}
 	
 	@GetMapping("/searchStudent")
@@ -94,23 +94,26 @@ public class StudentController {
 	public String updateStudent(@ModelAttribute Student st) {
 		service.updateStudent(st);
 		System.out.println(st);
-		return "student updated successfully";
+		return "index";
 	}
 	
 	@GetMapping("/deleteStudent")
 	public String deleteStudent(@RequestParam int roll) {
 		service.deleteStudent(roll);
-		return "student deleted successfully";
+		return "index";
 	}
 	
 	@GetMapping("getAllStudent")
-	public List<Student> getAllStudnet(){
-		return service.getAllStudent();	
+	public String getAllStudnet(Model model){
+		List<Student> stList = service.getAllStudent();
+		model.addAttribute("studentList", stList);		
+		return "displayAllStudent";
 	}
 	
 	@GetMapping("/deleteAllStudents")
     public String deleteAllStudents() {
-        return service.deleteAllStudents();
+        service.deleteAllStudents();
+        return "index";
     }
 	
 }
