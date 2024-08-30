@@ -87,7 +87,10 @@ public class StudentController {
 	public String searchStudent(@RequestParam int roll, Model model) {
 		Student st = service.searchStudent(roll);
 		model.addAttribute("student", st);
-		return "displayStudent";
+		model.addAttribute("msg", "Student displayed");
+//		return "displayStudent";
+		return "index";
+
 	}
 	
 	@PostMapping("/updateStudent")

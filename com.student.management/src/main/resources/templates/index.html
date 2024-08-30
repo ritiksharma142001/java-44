@@ -29,6 +29,9 @@
 	<a href="/openDeleteStudentPage" class="button">DELETE Student</a> <br><br>
 	<a href="/deleteAllStudents" class="button">DELETE all Students</a> <br><br>
     <a href="/openSearchStudentPage" class="button">SEARCH Student</a> <br><br>
+    <p th:if = "${msg}" 
+    	th:text="${msg}">
+    	</p>
     <a href="/getAllStudent" class="button">VIEW ALL Students</a> <br><br>
 </body>
 </html>
